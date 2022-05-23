@@ -1,0 +1,138 @@
+:root{
+ --backcolor: rgb(27, 10, 69);
+}
+body{
+    background-color: var(--backcolor);
+}
+.main{
+    /* border: 2px solid greenyellow; */
+    height: 97vh;
+    min-height: 600px;
+    width: 400px;
+    margin: auto;
+    position: relative;
+    /* background: linear-gradient(); */
+    background-color: khaki;
+    overflow: hidden;
+}
+ .semi-circle-outer, .semi-circle-inner{
+    height: 300px;
+    width: 400px;
+    background-color: grey;
+    /* border-top-left-radius: 50%;
+    border-top-right-radius: 50%; */
+    border-radius: 100%;
+    position: absolute;
+    bottom:-150px;
+}
+.semi-circle-outer{
+
+    animation: reload 5s infinite;
+}
+@keyframes reload{
+    0%{
+        width: 0px;
+    }
+    100%{
+        width: 400px;
+    }
+}
+.semi-circle-inner{
+    bottom: 0;
+    height: 300px;
+    width: 400px;
+    background-color: saddlebrown;
+    bottom: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.main .ball{
+    width: 80px;
+    height: 80px;
+    background: red;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%);
+}
+.arrow{
+    width: 2px;
+    height: 380px;
+    background: orange;
+    position: absolute;
+    bottom: -200px;
+    left: 50%;
+    transform: translate(-50%);
+    transition: translate 1s ease-in-out;
+    /* animation: manish 5s infinite; */
+}
+.head{
+    height: 6px;
+    width: 6px;
+    background-color: orange;
+    transform: translateX(-50%);
+}
+.pin-container{
+    width: 400px;
+    display: flex;
+   
+}
+.pin{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.pin .pin-head{
+    width: 40px;
+    height: 40px;
+    background-color: blue;
+    border-radius: 40%;
+}
+.pin .pin-bar{
+    width: 40px;
+    height: 10px;
+    background-color: green;
+}
+.pin .pin-mid-bar{
+    width: 40px;
+    height: 5px;
+    background-color: black;
+}
+.pin .pin-bottom{
+    width: 40px;
+    height: 100px;
+    background-color: white;
+    border-radius: 40%;
+    border-top-left-radius: 30%;
+    border-top-right-radius: 30%;
+}
+
+.won{
+    position: absolute;
+    font-family:monospace;
+    font-weight: bold;
+    font-size: 150px;
+    color: white;
+    top: 50%;
+    left: 50vw;
+    z-index: 4;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    display: none;
+}
+.ball-container{
+    position: absolute;
+    top:50%;
+    left: 20%;
+    padding: 12px;
+    transform: translateY(-50%);
+    background-color: white;
+
+}
+.bal{
+    height: 80px;
+    width: 80px;
+    background-color: red;
+    border-radius: 50%;
+    margin: 2px;
+}
